@@ -5,7 +5,7 @@ DL_Trial5 = DL_Trial5_Raw;
 
 
 % Convert RPi data timestamp from UNIX timestamp to MATLAB datetime variable
-t_RP = datetime(RP_Trial5.epoch, 'convertfrom', 'posixtime', 'Format', 'MM/dd/yy HH:mm:ss.SS');
+t_RP = datetime(RP_Trial5.t, 'convertfrom', 'posixtime', 'Format', 'MM/dd/yy HH:mm:ss.SS');
 
 % Convert DL data timestamp from a numerical timestamp to MATLAB datetime variable
 t1 = compose('%.2f' , DL_Trial5.timestamp); % Convert number to string so it can be read by datetime function

@@ -1,11 +1,3 @@
-
-raw_table = readtable("raw_data\8x8_trial_2.csv");
-t_raw = raw_table{:,2};
-O2_index = 7;
-T_g_index = 11;
-P_index = 8;
-
-
 % Initialize the final vectors to store average values:
 sz = size(timing_matrix,1)/2;
 final_matrix = zeros(sz, 3);
@@ -15,7 +7,9 @@ O2 = zeros(sz,1);
 T_g = zeros(sz,1);
 P = zeros(sz,1);
 
-% Loop through each point in the time matrix
+
+
+%% Loop through each point in the time matrix
 for i = 1:size(timing_matrix,1)/2
     
     % Get the x and y coordinates for the current point
@@ -33,7 +27,7 @@ for i = 1:size(timing_matrix,1)/2
     %final_matrix(i, 1) = x_pt;
     %final_matrix(i, 2) = y_pt;
 
-    O2(i) = mean(raw_table{window, O2_index});
+    O2(i) = mean(corrected_O2(window));
     T_g(i) = mean(raw_table{window, T_g_index});
     P(i) = mean(raw_table{window, P_index});
 end
@@ -64,6 +58,8 @@ surf(xq, yq, T_g_grid);
 nexttile
 P_grid = griddata(x,y,P,xq,yq);
 surf(xq, yq, P_grid);
+
+
 
 
 
