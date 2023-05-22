@@ -1,0 +1,9 @@
+TRIAL 6: 7x7, 100mm step, x_feedrate 5000, y_feedrate 2500, P20, 0.15g/s
+TRIAL 7: 7x7, 100mm step, x_feedrate 5000, y_feedrate 2500, P20, 0.15g/s
+TRIAL 8: 8x8, 100mm step, x_feedrate 5000, y_feedrate 2500, P20, 0.15g/s
+TRIAL 9: 8x8, 100mm step, x_feedrate 5000, y_feedrate 2500, P20, 0.15g/s
+
+All at Z=380
+
+Step time calcs: 14.75s for 5 steps in X at F5000
+17.01s for 5 steps in Y at F2500

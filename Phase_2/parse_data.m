@@ -28,6 +28,7 @@ for i = 1:size(timing_matrix,1)/2
     %final_matrix(i, 2) = y_pt;
 
     O2(i) = mean(corrected_O2(window));
+    %O2(i) = mean(raw_table{window, O2_index});
     T_g(i) = mean(raw_table{window, T_g_index});
     P(i) = mean(raw_table{window, P_index});
 end
@@ -39,25 +40,25 @@ end
 %colorbar;
 
 
-xv = linspace(min(x), max(x), 50);
-yv = linspace(min(y), max(y), 50);
-
-[xq,yq] = meshgrid(xv,yv);
-
-tiles = tiledlayout(2,2);
-title("Plots");
-
-nexttile
-O2_grid = griddata(x,y,O2,xq,yq);
-surf(xq, yq, O2_grid);
-
-nexttile
-T_g_grid = griddata(x,y,T_g,xq,yq);
-surf(xq, yq, T_g_grid);
-
-nexttile
-P_grid = griddata(x,y,P,xq,yq);
-surf(xq, yq, P_grid);
+% xv = linspace(min(x), max(x), 50);
+% yv = linspace(min(y), max(y), 50);
+% 
+% [xq,yq] = meshgrid(xv,yv);
+% 
+% tiles = tiledlayout(2,2);
+% title("Plots");
+% 
+% nexttile
+% O2_grid = griddata(x,y,O2,xq,yq);
+% surf(xq, yq, O2_grid);
+% 
+% nexttile
+% T_g_grid = griddata(x,y,T_g,xq,yq);
+% surf(xq, yq, T_g_grid);
+% 
+% nexttile
+% P_grid = griddata(x,y,P,xq,yq);
+% surf(xq, yq, P_grid);
 
 
 

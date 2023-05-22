@@ -1,4 +1,4 @@
-raw_table = readtable("raw_data\8x8_trial_2.csv");
+raw_table = readtable("raw_data\trial6.csv");
 t = raw_table{:,2};
 O2_index = 7;
 T_g_index = 11;

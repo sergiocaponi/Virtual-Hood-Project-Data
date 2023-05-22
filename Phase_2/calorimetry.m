@@ -60,7 +60,6 @@ Q = trapz(yv,trapz(xv,Q_PUA_grid,2));
 Q = Q/(1000^2)  % Convert from mm^2 to m^2
 
 
-
 %% Plot values:
 
 tiles = tiledlayout(2,2);
